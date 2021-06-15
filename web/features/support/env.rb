@@ -17,8 +17,9 @@ when "firefox_headless"
   @driver = :selenium_headless
 when "chrome_headless"
   Capybara.register_driver :selenium_chrome_headless do |app|
-    version = Capybara::Selenium::Driver.load_selenium
-    options_key = Capybara::Selenium::Driver::CAPS_VERSION.satisfied_by?(version) ? :capabilities : :options
+    # version = Capybara::Selenium::Driver.load_selenium
+    # options_key = Capybara::Selenium::Driver::CAPS_VERSION.satisfied_by?(version) ? :capabilities : :options
+    Capybara::Selenium::Driver.load_selenium
     browser_options = ::Selenium::WebDriver::Chrome::Options.new.tap do |opts|
       opts.add_argument("--headless")
       opts.add_argument("--disable-gpu")
