@@ -5,3 +5,4 @@ logs/*.json
 logs/*.png
 logs/*.csv
 dica.txt
+*.lock
