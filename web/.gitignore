@@ -4,5 +4,6 @@ logs/*.xml
 logs/*.json
 logs/*.png
 logs/*.csv
+logs/*.txt
 dica.txt
 *.lock
