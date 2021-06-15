@@ -7,7 +7,7 @@ describe "POST /sessions" do
       @result = Sessions.new.login(payload)
     end
     it "validar status code" do
-      expect(@result.code).to eql 200
+      expect(@result.code).to eql 201
     end
 
     it "validar id do usuário" do

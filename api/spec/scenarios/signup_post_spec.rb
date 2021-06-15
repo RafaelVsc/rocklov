@@ -31,7 +31,7 @@ describe "POST /signup" do
 
     it "validar status code (409)" do
       # entao deve retornar o status code 409
-      expect(@result.code).to eql 409
+      expect(@result.code).to eql 412
     end
 
     it "retornar mensagem" do
