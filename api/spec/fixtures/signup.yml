@@ -1,0 +1,40 @@
+---
+- title: Campo nome em branco
+  payload:
+    name: ''
+    email: vescio@bol.com.br
+    password: pwd123
+  code: 412
+  error: required name
+- title: Sem o campo nome
+  payload:
+    email: vescio@bol.com.br
+    password: pwd123
+  code: 412
+  error: required name
+- title: Campo email em branco
+  payload:
+    name: Rafael Vescio
+    email: ''
+    password: pwd123
+  code: 412
+  error: required email
+- title: Sem o campo email
+  payload:
+    name: Rafael Vescio
+    password: pwd123
+  code: 412
+  error: required email
+- title: Campo senha em branco
+  payload:
+    name: Rafael Vescio
+    email: vescio@bol.com.br
+    password: ''
+  code: 412
+  error: required password
+- title: Sem o campo senha
+  payload:
+    name: Rafael Vescio
+    email: vescio@bol.com.br
+  code: 412
+  error: required password

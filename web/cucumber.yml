@@ -1,0 +1,17 @@
+---
+# --publish-quiet para não printar links no fim da execução
+# -f progress para executar o relatório de saída sem a descrição do bdd
+# -f pretty é o formato padrão do cucumber (mostra a execução da feature e cenário no formato do BDD, mostra stack trace das falhas)
+#  -f html -o logs/report.html o cucumber gera um arquivo report.html dentro da pasta logs
+# o profile local cria uma variavel de ambiente na execução do ruby (importa do arquivo local.yml)
+default: --publish-quiet -p allure -p bdd -p local -p firefox
+bdd: -f pretty
+dots: -f progress
+html: -f html -o logs/report.html
+allure: --format AllureCucumber::CucumberFormatter --out=logs
+local: CONFIG=local.yml
+hmg: CONFIG=hmg.yml
+firefox: BROWSER=firefox
+firefox_headless: BROWSER=firefox_headless
+chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless
